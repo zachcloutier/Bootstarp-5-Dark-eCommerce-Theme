@@ -16,41 +16,41 @@
                 <span>Get connected with us on social networks:</span>
             </div>
 
-            <div>
+            <div class="text-center">
                 <?php if ( $facebook_link ) { ?>
 
                     <!-- Facebook -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $facebook_link; ?>"
                     ><i class="fab fa-facebook-f"></i></a>
                 <?php } ?>
                 <?php if ( $twitter_link ) { ?>
                     <!-- Twitter -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $twitter_link; ?>"
                     ><i class="fab fa-twitter"></i></a>
                 <?php } ?>
                 <?php if ( $pinterest_link ) { ?>
                     <!-- Pinterest -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $pinterest_link; ?>"
                     ><i class="fab fa-pinterest"></i></a>
                 <?php } ?>
                 <?php if ( $youtube_link ) { ?>
                     <!-- Youtube -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $youtube_link; ?>"
                     ><i class="fab fa-youtube"></i></a>
                 <?php } ?>
                 <?php if ( $instagram_link ) { ?>
                     <!-- Instagram -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $instagram_link; ?>"
                     ><i class="fab fa-instagram"></i></a>
                 <?php } ?>
                 <?php if ( $linkedin_link ) { ?>
                     <!-- Linkedin -->
-                    <a class="me-4 text-reset"
+                    <a class="mx-3 text-reset"
                        href="<?php echo $linkedin_link; ?>"
                     ><i class="fab fa-linkedin"></i></a>
                 <?php } ?>

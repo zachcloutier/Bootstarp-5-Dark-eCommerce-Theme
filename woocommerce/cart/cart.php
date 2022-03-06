@@ -153,23 +153,26 @@ do_action( 'woocommerce_before_cart' ); ?>
                         <?php if ( wc_coupons_enabled() ) { ?>
                         <div class="col-md-8 coupon">
                             <div class="row">
-                                <div class="col-md-8 form-outline">
+                                <div class="col-7 col-md-8 form-outline">
                                     <input type="text" name="coupon_code" class="input-text form-control"
                                         id="coupon_code" value=""
                                         placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
                                     <label class="form-label"
                                         for="coupon_code"><?php esc_html_e( 'Coupon', 'woocommerce' ); ?></label>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-5 col-md-4">
                                     <button type="submit" class="button" name="apply_coupon"
                                         value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                 </div>
                                 <?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+
+                                
                             </div>
                         </div>
                         <?php } ?>
 
-                        <div class="col-md-4 text-right">
+                        <div class="pt-4 pt-md-0 col-md-4 text-right">
                             <button type="submit" class="button" name="update_cart"
                                 value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
                         </div>
@@ -190,6 +193,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                     <?php do_action( 'woocommerce_after_cart_table' ); ?>
                 </form>
             </section>
+
+            <!-- Infromation -->
             <section class="">
                 <?php 
                             $cartAllert = trim( get_theme_mod('cart_alert_head') );
@@ -197,7 +202,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                             if($cartAllert){
                         ?>
 
-                <div class="mb-5">
+                <div class="text-center text-md-start mt-5">
                     <p class="text-primary">
 
                         <i class="fas fa-info-circle mr-1"></i>
@@ -212,13 +217,13 @@ do_action( 'woocommerce_before_cart' ); ?>
                 
                 if($ShippingAlertHead || $ShippingAlertBody){
                 ?>
-                <div class="mb-5">
+                <div class="text-center text-md-start mt-5">
                     <h5 class="mb-4"><?php echo $ShippingAlertHead?></h5>
 
                     <p class="mb-0"><?php echo $ShippingAlertBody?></p>
                 </div>
                 <?php }?>
-                <div>
+                <div class="text-center text-md-start mt-5">
                     <?php
                 $titleCards = trim( get_theme_mod('title_cards') );
                 $amazonPay = trim( get_theme_mod('amazon_pay_cards') );
@@ -236,8 +241,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                 
                 
                 ?>
-                    <?php if($amazonPay || $americanExpress || $applePay || $discover || $googlePay || $mastercard || $payPal || $samsungPay || $visa){?>
-                    <h5 class="mb-4"><?php echo $titleCards?></h5>
+                    <?php if($amazonPay || $americanExpress || $applePay || $discover || $googlePay || $mastercard || $payPal || $samsungPay || $visa){ ?>
+                    <h5 class="mb-4"><?php echo $titleCards ?></h5>
                     <?php }?>
 
 
@@ -309,18 +314,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                     <img class="mr-2" width="45px"
                         src="<?php echo get_template_directory_uri() . '/assets/logos/visa.svg' ?>" alt="Visa" />
                     <?php }?>
-
-
-
-
-
                 </div>
-
-
-
-
-
-
             </section>
             <!-- Section: Details -->
         </div>
@@ -343,7 +337,6 @@ do_action( 'woocommerce_before_cart' ); ?>
                 </div>
             </section>
         </div>
-    </div>
     </div>
 </section>
 

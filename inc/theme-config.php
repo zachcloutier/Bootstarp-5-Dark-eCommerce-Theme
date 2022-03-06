@@ -346,7 +346,7 @@ function starter_customize_register( $wp_customize ) {
    
 
     $wp_customize->add_setting( 'title_cards', array(
-        'default' => 'We Accept',
+        'default' => '',
     ) );
     $wp_customize->add_setting( 'amazon_pay_cards', array(
         'default' => false,
@@ -381,6 +381,11 @@ function starter_customize_register( $wp_customize ) {
         'label'   => 'Label',
         'section' => 'accepted_cards',
         'type'    => 'text',
+        'input_attrs' => array(
+            'placeholder' => 'We Accept',
+        )
+
+
     ) );
 
     $wp_customize->add_control( 'amazon_pay_cards', array(
