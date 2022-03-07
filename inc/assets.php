@@ -19,7 +19,5 @@ function load_all_stylesheets() {
 
     wp_enqueue_style( 'mdb.css', get_template_directory_uri() . '/assets/css/mdb.dark.min.css', '', '1.0.0' );
 
-    wp_enqueue_style( 'webkit.css', get_template_directory_uri() . '/assets/css/webkit.css', '', '1.0.0' );
-
     wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css', '', '1.0.0'  );
 }
