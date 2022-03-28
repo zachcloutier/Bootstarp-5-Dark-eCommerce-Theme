@@ -142,9 +142,9 @@ function starter_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'alert_body', array(
         'default' => '',
     ) );
-    $rows = 10;
+    $rows = 11;
     $maxLeingthtHead = 44;  
-    $maxLeingtht = 68*$rows+8;
+    $maxLeingtht = 68*$rows;
 
 
     $wp_customize->add_control( 'alert_head', array(
