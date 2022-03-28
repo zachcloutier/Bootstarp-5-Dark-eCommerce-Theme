@@ -70,7 +70,7 @@ if ( isset( $instance[ 'bio' ] ) ) {
 public function update( $new_instance, $old_instance ) {
 $instance = array();
 $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-$instance['bio'] = ( ! empty( $new_instance['bio'] ) ) ? strip_tags( $new_instance['bio'] ) : '';
+$instance['bio'] = ( ! empty( $new_instance['bio'] ) ) ? $new_instance['bio']  : '';
 return $instance;
 }
  
