@@ -60,7 +60,7 @@ if ( isset( $instance[ 'bio' ] ) ) {
 
     <label for="<?php echo $this->get_field_id( 'bio' ); ?>"><?php _e( 'Bio:' ); ?></label>
     <textarea  class="widefat" id="<?php echo $this->get_field_id( 'bio' ); ?>"
-        name="<?php echo $this->get_field_name( 'bio' ); ?>" type="textarea"><?php echo esc_attr( $bio ); ?></textarea>
+        name="<?php echo $this->get_field_name( 'bio' ); ?>" type="textarea"><?php echo $bio; ?></textarea>
 
 </p>
 <?php 
