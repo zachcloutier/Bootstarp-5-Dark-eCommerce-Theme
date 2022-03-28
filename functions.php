@@ -44,4 +44,32 @@ function replace_wc_img(){
     exit();
 }
 
-                                    
+                              
+
+
+function zc_wc_get_account_menu_item_classes( $endpoint ) {
+    global $wp;
+  
+    $classes = array(
+      'woocommerce-MyAccount-navigation-link',
+      'woocommerce-MyAccount-navigation-link--' . $endpoint,
+    );
+  
+    // Set current item class.
+    $current = isset( $wp->query_vars[ $endpoint ] );
+    if ( 'dashboard' === $endpoint && ( isset( $wp->query_vars['page'] ) || empty( $wp->query_vars ) ) ) {
+      $current = true; // Dashboard is not an endpoint, so needs a custom check.
+    } elseif ( 'orders' === $endpoint && isset( $wp->query_vars['view-order'] ) ) {
+      $current = true; // When looking at individual order, highlight Orders list item (to signify where in the menu the user currently is).
+    } elseif ( 'payment-methods' === $endpoint && isset( $wp->query_vars['add-payment-method'] ) ) {
+      $current = true;
+    }
+  
+    if ( $current ) {
+      $classes[] = 'active';
+    }
+  
+    $classes = apply_filters( 'woocommerce_account_menu_item_classes', $classes, $endpoint );
+  
+    return implode( ' ', array_map( 'sanitize_html_class', $classes ) );
+  }
