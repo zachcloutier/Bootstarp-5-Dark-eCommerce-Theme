@@ -3,7 +3,7 @@ Theme Name: Bootstarp 5 Dark eCommerce
 GitHub Theme URI: https://github.com/zachcloutier/Bootstrap-5-Dark-eCommerce-Theme
 Author: zcloutier
 Description: Dark eCommerce Theme Based on Bootstrap 5
-Version: 1.4.5
+Version: 1.4.6
 */
 
 div.product .woocommerce-product-rating {
@@ -479,7 +479,7 @@ a.add_to_wishlist:hover{
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-    background:#303030; 
+    background: transparent; 
   }
   
   /* Track */
@@ -489,7 +489,7 @@ a.add_to_wishlist:hover{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 15%);
+    background: hsla(0, 0%, 35%, 0.719); 
     border-radius: 20px;
     width: 5px;
   }
