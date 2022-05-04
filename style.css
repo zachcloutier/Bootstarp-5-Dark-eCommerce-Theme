@@ -499,7 +499,7 @@ a.add_to_wishlist:hover{
     background: hsla(0, 0%, 35%, 0.719); 
   }
 
-  .woosb-alert{
+  .woosb-alert.woosb-text{
     border-left: 4px solid #640!important;
     background-color: #e6d6b8!important;
   }
